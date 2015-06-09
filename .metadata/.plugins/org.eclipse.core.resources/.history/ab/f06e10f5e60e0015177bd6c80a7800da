@@ -1,0 +1,23 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+//		Calendar today= new Calendar();
+//		System.out.println(today.getDate());
+//		today.advance();
+//		System.out.println(today.getDate());
+		
+		Book toto=new Book("Kaa", "Chouchou");
+		System.out.println(toto.getAuthor());
+		System.out.println(toto.getDueDate());
+		System.out.println(toto.getTitle());
+		System.out.println(toto.toString());
+		toto.checkOut(5);
+		System.out.println(toto.getDueDate());
+		toto.checkIn();
+		System.out.println(toto.getDueDate());
+	}
+
+}

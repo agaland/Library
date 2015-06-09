@@ -1,0 +1,13 @@
+
+public class OverdueNotice {
+
+	// Attributes
+	private Patron patron;
+	private int todaysDate;
+	
+	//Constructor
+	public OverdueNotice(Patron patron, int todaysDate){
+		this.patron=patron;
+		this.todaysDate=todaysDate;
+	}
+}

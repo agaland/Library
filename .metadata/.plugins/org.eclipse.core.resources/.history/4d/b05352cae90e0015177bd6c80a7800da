@@ -1,0 +1,37 @@
+import java.util.ArrayList;
+
+
+public class Patron {
+	
+	// Attributes
+	private String name;
+	private Library library;
+	private ArrayList<Book> rentedBooks;
+	
+	// Constructors
+	public Patron(String name, Library library){
+		this.name=name;
+		this.library=library;
+		rentedBooks= new ArrayList<Book>(3);
+	}
+	
+	// Methods
+	String getName(){
+		return this.name;
+	}
+	
+	void take(Book book){
+		this.rentedBooks.add(book);
+	}
+	
+	void giveBack(Book book){
+		this.rentedBooks.remove(book);
+	}
+	ArrayList<Book> getBooks(){
+		return this.rentedBooks;
+	}
+	@Override
+	public String toString(){
+		return this.name;
+	}
+}

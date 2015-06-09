@@ -1,0 +1,13 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Calendar today= new Calendar();
+		System.out.println(today.getDate());
+		today.advance();
+		System.out.println(today.getDate());
+	}
+
+}

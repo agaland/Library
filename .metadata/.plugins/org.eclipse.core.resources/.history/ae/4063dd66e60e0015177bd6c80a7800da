@@ -1,0 +1,14 @@
+
+public class Book {
+
+	// Attributes
+	private String title;
+	private String author;
+	private int dueDate=-1;
+	
+	// Constructor
+	public Book(String title, String author){
+		this.title=title;
+		this.author=author;
+	}
+}
