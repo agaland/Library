@@ -1,0 +1,21 @@
+
+public class Calendar {
+	
+	// Attributes
+	private int date;
+	
+	// Constructor
+	
+	public Calendar(){
+		date=0;
+	}
+	
+	// Methods
+	public int getDate(){
+		return this.date;
+	}
+	
+	public void advance(){
+		this.date += 1;
+	}
+}

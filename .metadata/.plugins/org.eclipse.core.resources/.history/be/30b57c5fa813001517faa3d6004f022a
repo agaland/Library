@@ -1,0 +1,70 @@
+package tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import Library.Library;
+
+public class LibraryTest {
+
+	private Library lib;
+	
+	@Before
+	public void setUp() throws Exception {
+		lib=new Library();
+	}
+
+	@Test
+	public void test() {
+	//	lib.start();
+		lib.open();
+		System.out.println(lib.getTodaysDate());
+		lib.issueCard("Kaa-neki");
+		lib.serve("Kaa-neki");
+		assertEquals(lib.getPatronBeingServe().getName(),"Kaa-neki");
+		lib.search("John");
+		int[] tmp=new int[3];
+		tmp[0]=0;
+		tmp[1]=1;
+		tmp[2]=2;
+		lib.checkOut(tmp);
+		System.out.println(lib.getPatronBeingServe().getBooks().get(0).getDueDate());
+//		lib.open();
+		lib.close();
+		lib.open();
+		lib.close();
+		lib.open();
+		lib.close();
+		lib.open();
+		lib.close();
+		lib.open();
+		lib.close();
+		lib.open();
+		lib.close();
+		lib.open();
+		lib.close();
+		lib.open();
+		lib.close();
+		lib.open();
+		lib.close();
+		lib.open();
+		lib.close();
+		lib.open();
+		lib.close();
+		lib.open();
+		System.out.println(lib.getTodaysDate());
+		lib.serve("Kaa-neki");
+		lib.close();
+		lib.open();
+		lib.checkIn(tmp);
+		lib.serve("Kaa-neki");
+		lib.checkIn(tmp);
+		lib.checkIn(tmp);
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,61 @@
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
+
+
+public class Patron {
+	
+	// Attributes
+	private String name;
+	private Library library;
+	private ArrayList<Book> rentedBooks;
+	
+	// Constructors
+	public Patron(String name, Library library){
+		this.name=name;
+		this.library=library;
+		rentedBooks= new ArrayList<Book>(3);
+	}
+	
+	// Methods
+	public String getName(){
+		return this.name;
+	}
+	
+	public void take(Book book) throws ExecutionException {
+	//	if (this.library=){
+			if (this.rentedBooks.size()>3){
+				throw new ExecutionException("This patron has already checked out 3 books.");
+			}
+			else{
+				rentedBooks.add(book);
+			}
+//		}
+//		else {
+//			System.out.println("This patron is not registered.");
+//		}
+		// TODO check he has a card before he can check out a book.
+	}
+	
+	public void giveBack(Book book){
+		if(this.rentedBooks.isEmpty()){
+			System.out.println("This patron has not checked out any book.");
+		}
+		else{
+			this.rentedBooks.remove(book);
+		}	
+	}
+	
+	public ArrayList<Book> getBooks(){
+		return this.rentedBooks;
+	}
+	
+	@Override
+	public String toString(){
+		return this.name;
+	}
+
+	public boolean hasBooksThatWereDueYesterday() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+}

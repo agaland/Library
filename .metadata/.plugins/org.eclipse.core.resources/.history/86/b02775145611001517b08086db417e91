@@ -1,0 +1,39 @@
+package tests;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import Library.Book;
+import Library.Library;
+import Library.OverdueNotice;
+import Library.Patron;
+
+public class overdueNoticeTest {
+
+	private OverdueNotice not;
+	private Patron pat;
+	private Library lib;
+	private Book toto;
+	
+	@Before
+	public void setUp() throws Exception {
+		toto=new Book("Kaa", "Chouchou");
+		ArrayList<Book> totob=new ArrayList<Book>(0);
+		totob.add(toto);
+		lib=new Library(totob);
+		pat=new Patron("Kaa-neki", lib);
+		not=new OverdueNotice(pat, 2);
+		
+	}
+
+	@Test
+	public void test() throws Exception {
+		pat.take(toto);
+		
+	}
+
+}

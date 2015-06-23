@@ -1,0 +1,22 @@
+package tests;
+
+import static org.junit.Assert.*;
+import Calendar;
+import org.junit.Before;
+import org.junit.Test;
+
+public class CalendarTest {
+	private Calendar cal;
+	private Patron p;
+
+	@Before
+	public void setUp() throws Exception {
+		
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

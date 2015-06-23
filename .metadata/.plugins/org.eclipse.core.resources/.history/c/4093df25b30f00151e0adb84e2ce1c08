@@ -1,0 +1,29 @@
+
+public class OverdueNotice {
+
+	// Attributes
+	private Patron patron;
+	private int todaysDate;
+	
+	//Constructor
+	public OverdueNotice(Patron patron, int todaysDate){
+		this.patron=patron;
+		this.todaysDate=todaysDate;
+	}
+	
+	//Methods
+	@Override
+	public String toString(){
+		String msg = new String("");
+		msg+="Dear "+patron+", here is the lists of the books you have checked out and their due date: ";
+	
+		for (int i=0;i<3;i++){
+			msg+="\n"+this.patron.getBooks().get(i).toString();
+			
+			if (todaysDate<this.patron.getBooks().get(i).getDueDate()){
+				msg+="\n"+" OVERDUE";
+			}
+		}
+		return msg;
+	}
+}

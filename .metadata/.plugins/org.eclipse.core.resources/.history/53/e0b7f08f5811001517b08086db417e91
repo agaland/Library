@@ -1,0 +1,25 @@
+package tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import Library.Library;
+
+public class LibraryTest {
+
+	private Library lib;
+	
+	@Before
+	public void setUp() throws Exception {
+		lib=new Library();
+	}
+
+	@Test
+	public void test() {
+		lib.open();
+		
+	}
+
+}
